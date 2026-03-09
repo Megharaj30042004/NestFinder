@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Room | NestFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo"><i class="fa-solid fa-building-user"></i> NestFinder Admin</a>
+    <div class="nav-links">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Listings</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h2 style="margin-bottom: 25px; color: #0f172a;"><i class="fa-solid fa-house-medical"></i> List a New Property</h2>
+        
+        <form id="addRoomForm">
+            <div class="form-group">
+                <label>Property Title</label>
+                <input type="text" id="rTitle" class="form-control" placeholder="e.g. Luxury Tech Suites" required>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="rCity" class="form-control" placeholder="e.g. Bengaluru" required>
+                </div>
+                <div class="form-group">
+                    <label>Specific Location</label>
+                    <input type="text" id="rLoc" class="form-control" placeholder="e.g. Indiranagar" required>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label>Room Type (BHK)</label>
+                    <select id="rType" class="form-control" required>
+                        <option value="Single Room">Single Room</option>
+                        <option value="Double Sharing">Double Sharing</option>
+                        <option value="1 BHK">1 BHK</option>
+                        <option value="2 BHK">2 BHK</option>
+                        <option value="3 BHK">3 BHK</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Monthly Rent (₹)</label>
+                    <input type="number" id="rPrice" class="form-control" placeholder="e.g. 15000" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Online Image URL</label>
+                <input type="url" id="rImage" class="form-control" placeholder="Paste Unsplash image link here" required>
+            </div>
+
+            <button type="submit" class="btn-block" style="margin-top: 10px;">Create Listing securely</button>
+        </form>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

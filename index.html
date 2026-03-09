@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NestFinder | PG & Coliving</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo"><i class="fa-solid fa-building-user"></i> NestFinder</a>
+    <div class="nav-links">
+        <a href="index.html">Find Rooms</a>
+        <a href="add-room.html" class="admin-btn"><i class="fa-solid fa-plus"></i> Add Property (Admin)</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Find Your Perfect Space</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by city or location (e.g. Bengaluru)...">
+        <select id="typeFilter" class="search-input" style="border-left: 1px solid #e2e8f0; border-radius: 0;">
+            <option value="All">All BHK Types</option>
+            <option value="Single Room">Single Room</option>
+            <option value="Double Sharing">Double Sharing</option>
+            <option value="1 BHK">1 BHK</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+        </select>
+        <button class="search-btn" id="searchBtn">Search Rooms</button>
+    </div>
+</section>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <h2 style="font-size: 24px;">Recommended Properties</h2>
+        <span style="color: #64748b; font-weight: 600;" id="resultCount">Loading...</span>
+    </div>
+    
+    <div id="propertyGrid" class="grid">
+        </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
